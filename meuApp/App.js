@@ -1,23 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Image, View } from 'react-native';
+import Produto from './src/tela/ProdutoItens.js';
 
-import logo from './assets/NATIVE.png';
+import {useFonts, SpaceGrotesk_300Light, SpaceGrotesk_700Bold} from "@expo-google-fonts/space-grotesk";
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Image source={logo}/>
-      <StatusBar style="auto"/>
-    </View>
-  );
+
+  const [ fonteCarregada ] = useFonts({"SpaceGroteskRegular" : SpaceGrotesk_300Light,
+                                          "SpaceGroteskBold" : SpaceGrotesk_700Bold});
+
+
+
+  return <Produto/>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000000',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-});
