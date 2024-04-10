@@ -1,5 +1,7 @@
 import React from "react";
-import { StyleSheet, Image, View , Dimensions} from "react-native";
+import { StyleSheet, Image, View, TouchableOpacity, Alert} from 'react-native';
+import Texto from '../../../Componentes/Texto'; //Componente de Exibição de Texto
+
 
 // Captura o tamanho da tela que esta rodando o app
 const width = Dimensions.get('screen').width
@@ -7,8 +9,9 @@ const width = Dimensions.get('screen').width
 export default function Detalhes(){
     return <>
   
-            <Text style={styles.descricao}>Embarque em uma aventura totalmente nova como a poderosa bolinha, Kirby. Explore livremente em fases 3D enquanto descobre um mundo misterioso com estruturas abandonadas de uma civilização passada - como um shopping center?! Copie as habilidades dos inimigos, como o novo Drill e Ranger, e use-as para atacar, explorar seus arredores e salvar os Waddle Dees sequestrados do feroz Beast Pack ao lado do misterioso Elfilin.</Text>
-            <Text style={styles.preco}>R$ 299,90</Text>
+            <Texto style={styles.descricao}>Embarque em uma aventura totalmente nova como a poderosa bolinha, Kirby. Explore livremente em fases 3D enquanto descobre um mundo misterioso com estruturas abandonadas de uma civilização passada - como um shopping center?! Copie as habilidades dos inimigos, como o novo Drill e Ranger, e use-as para atacar, explorar seus arredores e salvar os Waddle Dees sequestrados do feroz Beast Pack ao lado do misterioso Elfilin.</Texto>
+            <Texto style={styles.preco}>R$ 299,90</Texto>
+            <Botao textoBotao={"Adicionar na Lista de Desejos"} acaobotao={onclick=(Alert.alert("Lista de Desejos!", "Em breve a funcionalidade lista de desejos estará disponível!"))}></Botao>
     </>
 }
 
