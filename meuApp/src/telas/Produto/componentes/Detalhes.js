@@ -7,6 +7,7 @@ import Botao from '../../../Componentes/Botao'
 
 export default function Detalhes({nome, detalhes, preco, botao}){
     return <>
+            <Texto style={styles.nome}>{nome}</Texto>
             <Texto style={styles.descricao}>{detalhes}</Texto>
             <Texto style={styles.preco}>{preco}</Texto>
             <Botao textoBotao={botao} acaoBotao={()=>{Alert.alert("Lista de Desejos!", "Em breve a funcionalidade lista de desejos estará disponível!")}}></Botao>
@@ -14,9 +15,15 @@ export default function Detalhes({nome, detalhes, preco, botao}){
 }
 
 const styles = StyleSheet.create({
+    nome: {
+        marginTop: 60,
+        fontSize: 24,
+        marginLeft: 10,
+        fontWeight: "bold",
+    },
     descricao: {
         padding: 10,
-        marginTop: 50,
+        marginTop: 10,
         marginBottom: 10,
         color: "black",
         fontSize: 18,
@@ -26,6 +33,5 @@ const styles = StyleSheet.create({
         fontSize: 26,
         marginLeft: 10,
         fontWeight: "bold",
-        marginTop: 8,
     },
 });
