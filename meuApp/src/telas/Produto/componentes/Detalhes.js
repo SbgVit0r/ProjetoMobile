@@ -15,7 +15,8 @@ export default function Detalhes({nome, detalhes, preco, botao}){
 
 const styles = StyleSheet.create({
     descricao: {
-        marginTop: 10,
+        padding: 10,
+        marginTop: 50,
         marginBottom: 10,
         color: "black",
         fontSize: 18,
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
     preco:{
         color: "#2A9F85",
         fontSize: 26,
+        marginLeft: 10,
         fontWeight: "bold",
         marginTop: 8,
     },

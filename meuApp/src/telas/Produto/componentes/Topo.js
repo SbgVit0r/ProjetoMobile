@@ -22,10 +22,12 @@ const styles = StyleSheet.create({
     },
     titulo: {
       width: "100%",
+      marginTop: "73%",
       position: "absolute",
-      textAlign: "right",
+      textAlign: "left",
       fontSize: 22,
       color: "white",
+      backgroundColor: "red",
       fontWeight: "bold",
       padding: 10,
     },
