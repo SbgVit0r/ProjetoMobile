@@ -7,18 +7,19 @@ export default function Texto({children, style}){
     let estilo = estilos.texto;
 
     // Verifica se deve exibir em Negrito
-    if (style.fontWeight == "bold"){
+    if (style?.fontWeight == "bold"){
         estilo = estilos.textoNegrito;
     }
 
-    return <Text style={[style, estilos.texto]}>{children}</Text>
+    return <Text style={[style, estilo]}>{children}</Text>
 }
 
 const estilos = StyleSheet.create({
     texto: {
-       fontFamily: "SpaceG",
+       fontFamily: "SpaceGroteskRegular",
     },
     textoNegrito: {
-        fontFamily: "SpaceGBold",
+        fontFamily: "SpaceGroteskBold",
+        fontWeight: "normal",
     }
 })

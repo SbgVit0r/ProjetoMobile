@@ -2,6 +2,8 @@ import React from "react";
 import Header from '../../../../assets/jogos.jpg';
 import { StyleSheet, Dimensions, Image, StatusBar} from 'react-native';
 
+import Texto from "../../../Componentes/Texto";
+
 //Captura o tamanho da tela que está rodando o app
 const width = Dimensions.get('screen').width;
 
