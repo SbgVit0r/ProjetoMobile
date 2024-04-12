@@ -10,9 +10,9 @@ export default function Botao({textoBotao, acaoBotao}){
 
 const estilos = StyleSheet.create({
     botao: {
-        marginTop: 16,
         backgroundColor: '#009DFF',
         paddingVertical: 16,
+        margin: 30,
         borderRadius: 6
     },
     botaoTexto: {
