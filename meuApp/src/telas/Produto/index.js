@@ -3,6 +3,7 @@ import { FlatList, View, Image, Text} from "react-native";
 
 import Topo from './componentes/Topo';
 import Detalhes from './componentes/Detalhes';
+import Item from "./componentes/Item";
 
 export default function Produto({topo, detalhes, itens}){
     const renderItem = ({item:{nome, imagem}}) =><View key={nome}>
@@ -13,12 +14,18 @@ export default function Produto({topo, detalhes, itens}){
     return <>
         <FlatList
             data={itens.lista}
-            renderItem={renderItem}
-            keyExtractor={({nome})=>{nome}}
+            renderItem={Item}
+            keyExtractor={itens.lista.nome}
+            ListHeaderComponent ={() =>{
+                return <>      
+                    <Topo {...topo}/>
+                    <Detalhes {...detalhes}/>
+                </>
+            }}
         />
         
-        <Topo {...topo}/>
-        <Detalhes {...detalhes}/>
+
+
     </>
 }
 
