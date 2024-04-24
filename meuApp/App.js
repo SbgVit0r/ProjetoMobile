@@ -5,6 +5,9 @@ import ProdutoItem from './src/telas/Produto/';
 import mock from './src/mocks/produto.js'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
+function MenuKit(){
+  return <Produto {...mock}/>
+}
 
 const Tab = createBottomTabNavigator();  
 
