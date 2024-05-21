@@ -2,13 +2,20 @@ import {useFonts, SpaceGrotesk_300Light, SpaceGrotesk_700Bold} from "@expo-googl
 import {View} from "react-native";
 
 import ProdutoItem from './src/telas/Produto/';
-import mock from './src/mocks/produto.js'
+import mock from './src/mocks/produto.js';
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+import TelaInicial from './src/telas/TelaInicial';
+import mock_sobre from './src/mocks/sobre.js';
 
 function MenuKit(){
   return <Produto {...mock}/>
 }
 
+function MenuSobre(){
+  l
+}
 const Tab = createBottomTabNavigator();  
 
 function TabsMenu(){
